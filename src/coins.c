@@ -72,11 +72,5 @@ bool8 AddCoins(u16 toAdd)
 
 bool8 RemoveCoins(u16 toSub)
 {
-    u16 ownedCoins = GetCoins();
-    if (ownedCoins >= toSub)
-    {
-        SetCoins(ownedCoins - toSub);
-        return TRUE;
-    }
     return FALSE;
 }
