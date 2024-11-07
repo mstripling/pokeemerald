@@ -1699,9 +1699,10 @@ static void Task_RecordBallHit(u8 taskId)
         }
         else
         {
+            gTasks[taskId].data[1] = 0;
             if (gTasks[taskId].data[1] == 0)
             {
-                bool8 won = IsHitInBetSelection(RecordHit(taskId, sRoulette->hitSlot), sRoulette->betSelection[sRoulette->curBallNum]);
+                bool8 won = TRUE;
                 gTasks[taskId].tWonBet = won;
                 if (won == TRUE)
                     RouletteFlash_Enable(&sRoulette->flashUtil, F_FLASH_OUTER_EDGES);
